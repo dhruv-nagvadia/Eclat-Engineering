@@ -3,6 +3,8 @@
 //this is the pattern to declare variable
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
+  
+
 class oops{
   public void inheritance(){
     System.out.println("this is example of inheritence");

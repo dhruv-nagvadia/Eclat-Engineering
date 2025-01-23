@@ -35,7 +35,7 @@
       const bmi = calculateBMI(weight, height);
 
       if (!isNaN(bmi) && bmi > 0) {
-        result.innerHTML = `Your BMI is <strong>${bmi.toFixed(2)}</strong>.`;
+        result.innerHTML = ``;
         if (bmi < 18.5) {
           result.innerHTML += ' You are underweight.';
         } else if (bmi >= 18.5 && bmi < 24.9) {

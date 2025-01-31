@@ -1,1 +1,0 @@
-Download Android Studio and setup and Setting up the development environment (React Native CLI) and learn about basic react native fundamentals.

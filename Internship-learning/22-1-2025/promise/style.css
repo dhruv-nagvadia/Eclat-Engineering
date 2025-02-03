@@ -1,0 +1,104 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Header Styling */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  h2, h3 {
+    margin: 5px 0;
+  }
+  
+  /* Input and Button Styling */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+    max-width: 80%;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Output Section */
+  #output {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Temperature and Location Display */
+  #locations {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  #time {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  #temprature {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    input[type="text"] {
+      width: 200px;
+    }
+  
+    button {          
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+  
+    #output {
+      font-size: 1rem;
+    }
+  }
+  

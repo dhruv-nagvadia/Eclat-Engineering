@@ -437,5 +437,4 @@
     },
   });
 
-  
   export default App;

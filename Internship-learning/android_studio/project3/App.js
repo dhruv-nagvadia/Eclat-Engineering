@@ -130,7 +130,6 @@ const App = () => {
         >
           {data[user].map((item, index) => (
             <View
-              key={index}
               style={{
                 width: index === 0 ? "100%" : "48%",
                 marginBottom: 10,

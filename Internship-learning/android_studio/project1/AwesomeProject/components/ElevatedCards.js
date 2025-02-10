@@ -49,7 +49,7 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const data = ["abc", "bcd", "def", "efg","fgh","ghi"];
+const data = ["abc", "bcd", "def", "efg","fgh"];
 
 export default function ElevatedCards() {
   return (
@@ -57,7 +57,7 @@ export default function ElevatedCards() {
       <FlatList
         horizontal
         data={data}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(index) => index.toString()}
         renderItem={({ item }) => (
           <View style={[styles.card, styles.elevated]}>
             <Text style={styles.font}>{item}</Text>

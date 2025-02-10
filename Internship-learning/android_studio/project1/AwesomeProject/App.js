@@ -39,6 +39,7 @@ import React from 'react'
 import Flatcards from './components/Flatcards'
 import ElevatedCards from './components/ElevatedCards'
 import FancyCard from './components/FancyCard'
+import Flexbox from './components/flexbox'
 
 const App = () => {
   return (
@@ -48,6 +49,7 @@ const App = () => {
         <Flatcards/>
         <ElevatedCards/>
         <FancyCard/>
+        <Flexbox/>
         </View>
       </ScrollView>
     </View>

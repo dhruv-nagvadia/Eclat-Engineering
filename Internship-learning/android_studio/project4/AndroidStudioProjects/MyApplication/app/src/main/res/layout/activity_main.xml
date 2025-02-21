@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/form"
+        android:text="Calculator"
+        android:background="@color/design_default_color_secondary"
+        android:textSize="36sp"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Enter_number"
+            app:hintTextColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elegantTextHeight="true"
+            android:hint="result"
+            android:padding="16dp" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/form"
+        >
+
+        <TableRow
+            android:id="@+id/row1"
+            android:background="@color/black"
+            android:padding="10dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/b1"
+                android:textColor="@color/white"
+                android:text="1"
+                android:layout_margin="15dp"/>
+
+            <Button
+                android:id="@+id/b2"
+                android:textColor="@color/white"
+                android:text="2"
+                android:layout_margin="15dp"/>
+            <Button
+                android:id="@+id/b3"
+                android:textColor="@color/white"
+                android:text="3"
+                android:layout_margin="15dp"/>
+        </TableRow>
+    </TableLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/table"
+        app:layout_constraintBottom_toTopOf="@id/result"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/b4"
+            android:textColor="@color/white"
+            android:text="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/b5"
+            android:textColor="@color/white"
+            android:text="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/b4" />
+
+        <Button
+            android:id="@+id/b6"
+            android:textColor="@color/white"
+            android:text="6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/b5" />
+
+        <Button
+            android:id="@+id/b7"
+            android:textColor="@color/white"
+            android:text="7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/b4"
+            android:layout_alignStart="@id/b4" />
+
+        <Button
+            android:id="@+id/b8"
+            android:textColor="@color/white"
+            android:text="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/b5"
+            android:layout_alignStart="@id/b5"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/b9"
+            android:textColor="@color/white"
+            android:text="9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/b6"
+            android:layout_alignEnd="@id/b6"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/numbers"
+        android:background="@color/black"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/b0"
+            android:text="0"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:id="@+id/bc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/b0"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:text="C"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/br"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/bc"
+            android:text="="
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bp"
+            android:textColor="@color/white"
+            android:text="+"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/br"
+            />
+
+        <Button
+            android:id="@+id/bm"
+            android:textColor="@color/white"
+            android:text="-"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/bp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/br"
+            android:layout_marginStart="15dp"
+           />
+        <Button
+            android:id="@+id/bmu"
+            android:textColor="@color/white"
+            android:text="*"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/bm"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/br"
+            android:layout_marginStart="15dp"
+            />
+
+        <Button
+            android:id="@+id/bd"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="/"
+            android:layout_toEndOf="@id/bmu"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/br"
+            android:layout_marginStart="15dp"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/round"
+            android:layout_width="match_parent"
+            android:layout_height="375dp"
+            android:layout_gravity="center"
+            android:src="@drawable/black1"
+            android:text="Child 2" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:cardCornerRadius="150dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/krishna"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dhruv"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/Dhruv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/edit"
+            android:scaleType="centerCrop"
+            android:layout_gravity="end"
+            android:layout_marginEnd="120dp"
+            android:layout_marginTop="70dp"
+            android:translationZ="90dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dhruv"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="35sp"
+            android:layout_marginTop="310dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
